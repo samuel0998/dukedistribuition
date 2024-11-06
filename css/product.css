@@ -1,0 +1,121 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .product {
+    display: flex;
+    background-color: var(--cor-p4);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .product-image {
+    flex-basis: 40%;
+  }
+  
+  .product-image img {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-image:hover {
+    padding: 5px;
+    transition: 1.2s;
+  }
+  
+  .product-info {
+    flex-basis: 60%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .product-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .original-price {
+    font-size: 1rem;
+    color: #666;
+    text-decoration: line-through;
+    margin-right: 0.5rem;
+  }
+  
+  .discounted-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-p5);
+  }
+  
+  .discount {
+    background-color: var(--cor-p5);
+    color: var(--cor-p4);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+  }
+  
+  .product-availability,
+  .product-countdown {
+    font-size: 0.9rem;
+    color: var(--cor-p1);
+    margin-bottom: 1rem;
+  }
+  
+  .buy-button {
+    background-color: var(--cor-p5);
+    color:var(--cor-p4);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+
+  .title-product{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .feature-icon{
+    display: flex;
+    align-items: center;
+  }
+
+
+  @media (max-width: 600px) {
+    .product-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  
+    .product-title {
+      font-size: 1rem;
+    }
+  
+    .product-countdown span {
+      font-size: 0.9rem;
+    }
+  
+    .buy-button {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  
